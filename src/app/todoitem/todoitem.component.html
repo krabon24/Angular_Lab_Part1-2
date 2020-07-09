@@ -1,0 +1,11 @@
+<div class="inner" 
+        [ngStyle]="{'text-decoration': todoitem.completed ? 'line-through' : 'none'}">
+        <button class="completed" *ngIf="!todoitem.completed" (click)="todoitem.completed = true">complete
+        </button>{{todoitem.task}}<button class="remove" (click)="removeTask()">x</button>
+
+
+
+
+
+        
+    </div>

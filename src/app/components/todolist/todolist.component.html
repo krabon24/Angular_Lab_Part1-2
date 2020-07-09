@@ -1,0 +1,12 @@
+<div class="outer">
+    <h1>TODO List</h1>
+    <br>
+    <label for="description">A place to store your todos</label>
+    <br>
+    <input [(ngModel)]="filterValue" type="text" placeholder="filter your to-dos" class="filter" (input)="filterItems()" />
+    <app-todoitem [todoitem]="item" *ngFor="let item of filterToDoItems"></app-todoitem>
+    <input [(ngModel)]="toDoItem" type="text" placeholder="Add your to-do" class="addT" />
+    <br>
+    <button class="add" (click)="addTask()">Add</button>
+    <app-todoitem [todoitem]="{task: 'string', completed: true}"></app-todoitem>
+</div>
